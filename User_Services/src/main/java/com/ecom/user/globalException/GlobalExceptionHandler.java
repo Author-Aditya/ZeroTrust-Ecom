@@ -8,16 +8,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.ecommerce.models.ErrorResponse;
+import com.ecommerce.models.ErrorResponseDTO;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
     // 🔴 Handle DB constraint issues (like duplicate email)
     @ExceptionHandler(DataIntegrityViolationException.class)
-    public ResponseEntity<ErrorResponse> handleDataIntegrity(DataIntegrityViolationException ex) {
+    public ResponseEntity<ErrorResponseDTO> handleDataIntegrity(DataIntegrityViolationException ex) {
 
-        ErrorResponse error = new ErrorResponse(
+        ErrorResponseDTO error = new ErrorResponseDTO(
                 "Duplicate or invalid data",
                 ex.getMostSpecificCause().getMessage(),
                 LocalDateTime.now()
@@ -28,9 +28,9 @@ public class GlobalExceptionHandler {
 
     // 🔴 Handle generic exceptions
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorResponse> handleGeneric(Exception ex) {
+    public ResponseEntity<ErrorResponseDTO> handleGeneric(Exception ex) {
 
-        ErrorResponse error = new ErrorResponse(
+        ErrorResponseDTO error = new ErrorResponseDTO(
                 "Something went wrong",
                 ex.getMessage(),
                 LocalDateTime.now()
