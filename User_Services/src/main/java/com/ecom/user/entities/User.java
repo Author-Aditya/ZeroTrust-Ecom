@@ -1,4 +1,4 @@
-package com.ecom.model.entities;
+package com.ecom.user.entities;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -12,7 +12,8 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+   
+	@Column(unique = true)
     private String username;
 
     private String password;
@@ -42,6 +43,10 @@ public class User {
 
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
+	}
+
+	public int getId() {
+		return this.id;
 	}
     
     

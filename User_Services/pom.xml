@@ -8,10 +8,10 @@
 		<version>4.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ecommorce.users</groupId>
+	<groupId>com.ecommorce.user</groupId>
 	<artifactId>E-commerce-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Model_Services</name>
+	<name>User_Services</name>
 	<description>E-commerce-application</description>
 	<url/>
 	<licenses>
@@ -46,9 +46,10 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-           <groupId>org.postgresql</groupId>
-           <artifactId>postgresql</artifactId>
-        </dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
@@ -64,6 +65,21 @@
             <artifactId>common-dtos</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+    <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>1.5.5.Final</version>
+    </dependency>
+   <!-- Swagger for Spring Boot -->
+   <dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    <version>2.5.0</version>
+  </dependency>
+
+
+
+        
 	</dependencies>
 
 	<build>
@@ -72,6 +88,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version><!--$NO-MVN-MAN-VER$-->
+            <configuration>
+                <source>17</source>
+                <target>17</target>
+                <annotationProcessorPaths>
+                    <path>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct-processor</artifactId>
+                        <version>1.5.5.Final</version>
+                    </path>
+                </annotationProcessorPaths>
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 
