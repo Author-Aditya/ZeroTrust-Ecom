@@ -2,13 +2,13 @@ package com.ecommerce.models;
 
 import java.time.LocalDateTime;
 
-public class ErrorResponse {
+public class ErrorResponseDTO {
 
     private String message;
     private String details;
     private LocalDateTime timestamp;
 
-    public ErrorResponse(String message, String details, LocalDateTime timestamp) {
+    public ErrorResponseDTO(String message, String details, LocalDateTime timestamp) {
         this.message = message;
         this.details = details;
         this.timestamp = timestamp;
