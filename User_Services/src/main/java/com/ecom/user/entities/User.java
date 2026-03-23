@@ -20,6 +20,8 @@ public class User {
 
     @Column(unique = true)
     private String emailId;
+    
+    private String role;
 
 	public String getUsername() {
 		return username;
@@ -48,6 +50,16 @@ public class User {
 	public int getId() {
 		return this.id;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	
     
     
     

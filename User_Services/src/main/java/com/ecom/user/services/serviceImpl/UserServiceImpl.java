@@ -1,7 +1,9 @@
 package com.ecom.user.services.serviceImpl;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.ecom.user.entities.User;
@@ -17,10 +19,12 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepo userRepo;
     private final UserMapper userMapper;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepo userRepo, UserMapper userMapper) {
+    public UserServiceImpl(UserRepo userRepo, UserMapper userMapper, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
         this.userMapper = userMapper;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -29,6 +33,9 @@ public class UserServiceImpl implements UserService {
         logger.info("Service: Creating user with email: {}", userDTO.getEmailId());
 
         User user = userMapper.toEntity(userDTO);
+
+        // 🔥 Encode password
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         User savedUser = userRepo.save(user);
 
@@ -51,4 +58,5 @@ public class UserServiceImpl implements UserService {
 
         return deleteDto;
     }
+
 }

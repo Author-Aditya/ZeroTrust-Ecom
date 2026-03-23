@@ -1,2 +1,4 @@
-com\ecommerce\models\ErrorResponse.class
+com\ecommerce\models\AuthResponseDTO.class
+com\ecommerce\models\ErrorResponseDTO.class
 com\ecommerce\models\UserDTO.class
+com\ecommerce\models\AuthRequestDTO.class

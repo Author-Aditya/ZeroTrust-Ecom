@@ -4,9 +4,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ecom.user.entities.User;
 
+import jakarta.transaction.Transactional;
+
 public interface UserRepo extends JpaRepository<User, Integer> {
 
-	boolean deleteByUsername(String username);
+	@Transactional
+	void deleteByUsername(String username);
 
 	User findByUsername(String username);
 
