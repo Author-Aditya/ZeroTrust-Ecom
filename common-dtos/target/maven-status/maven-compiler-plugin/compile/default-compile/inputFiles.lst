@@ -1,4 +1,13 @@
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\enums\VariantStatus.java
 C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\ErrorResponseDTO.java
 C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\AuthRequestDTO.java
-C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\UserDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\enums\InventoryStatus.java
 C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\AuthResponseDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\enums\AdjustmentType.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\enums\TransactionType.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\ProductRequestDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\enums\ProductStatus.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\ProductResponseDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\UserDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\ProductVariantRequestDTO.java
+C:\Users\adity\git\ZeroTrust-Ecom\common-dtos\src\main\java\com\ecommerce\models\ProductVariantDTO.java

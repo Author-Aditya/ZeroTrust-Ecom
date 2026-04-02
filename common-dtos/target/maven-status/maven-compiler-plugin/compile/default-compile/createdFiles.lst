@@ -1,4 +1,13 @@
+com\ecommerce\models\enums\VariantStatus.class
+com\ecommerce\models\ProductResponseDTO.class
 com\ecommerce\models\AuthResponseDTO.class
-com\ecommerce\models\ErrorResponseDTO.class
-com\ecommerce\models\UserDTO.class
+com\ecommerce\models\enums\InventoryStatus.class
 com\ecommerce\models\AuthRequestDTO.class
+com\ecommerce\models\ProductVariantDTO.class
+com\ecommerce\models\enums\AdjustmentType.class
+com\ecommerce\models\ProductRequestDTO.class
+com\ecommerce\models\ErrorResponseDTO.class
+com\ecommerce\models\enums\ProductStatus.class
+com\ecommerce\models\ProductVariantRequestDTO.class
+com\ecommerce\models\UserDTO.class
+com\ecommerce\models\enums\TransactionType.class
